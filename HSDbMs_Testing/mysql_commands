@@ -1,0 +1,42 @@
+create table mytable(fid INT NOT NULL AUTO_INCREMENT, wing VARCHAR(2) NOT NULL, fno INT NOT NULL, name VARCHAR(20), phone INT(10), rent BOOLEAN, PRIMARY KEY(fid));
+
+describe mytable;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| fid   | int(11)     | NO   | PRI | NULL    | auto_increment |
+| wing  | varchar(2)  | NO   |     | NULL    |                |
+| fno   | int(11)     | NO   |     | NULL    |                |
+| name  | varchar(20) | YES  |     | NULL    |                |
+| phone | int(10)     | YES  |     | NULL    |                |
+| rent  | tinyint(1)  | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+
+alter table mytable AUTO_INCREMENT= 100;
+
+insert into mytable(wing,fno) values('A',101),('A',102),('A',103),('A',201),('A',202),('A',203),('B',101),('B',102),('B',103),('B',201),('B',202),('B',203),('C',101),('C',102),('C',103),('C',201),('C',202),('C',203);
+
+select * from mytable;
++-----+------+-----+------+-------+------+
+| fid | wing | fno | name | phone | rent |
++-----+------+-----+------+-------+------+
+| 100 | A    | 101 | NULL |  NULL | NULL |
+| 101 | A    | 102 | NULL |  NULL | NULL |
+| 102 | A    | 103 | NULL |  NULL | NULL |
+| 103 | A    | 201 | NULL |  NULL | NULL |
+| 104 | A    | 202 | NULL |  NULL | NULL |
+| 105 | A    | 203 | NULL |  NULL | NULL |
+| 106 | B    | 101 | NULL |  NULL | NULL |
+| 107 | B    | 102 | NULL |  NULL | NULL |
+| 108 | B    | 103 | NULL |  NULL | NULL |
+| 109 | B    | 201 | NULL |  NULL | NULL |
+| 110 | B    | 202 | NULL |  NULL | NULL |
+| 111 | B    | 203 | NULL |  NULL | NULL |
+| 112 | C    | 101 | NULL |  NULL | NULL |
+| 113 | C    | 102 | NULL |  NULL | NULL |
+| 114 | C    | 103 | NULL |  NULL | NULL |
+| 115 | C    | 201 | NULL |  NULL | NULL |
+| 116 | C    | 202 | NULL |  NULL | NULL |
+| 117 | C    | 203 | NULL |  NULL | NULL |
++-----+------+-----+------+-------+------+
+
