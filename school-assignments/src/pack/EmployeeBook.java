@@ -47,6 +47,12 @@ public class EmployeeBook {
         taxable_income=net_sal*12;
 
         //Calculate tax according to the taxable income
+        if(age>65)
+        {
+            System.out.println("TAX NOT APPLICABLE TO YOU");//According to income tax act,income tax is not applicable to people above 65 years
+        }
+        else
+        {
         if(taxable_income<=250000)
             tax_amount=0;
         else if(taxable_income>250000 && taxable_income<=500000)
@@ -55,6 +61,7 @@ public class EmployeeBook {
             tax_amount=(((taxable_income-500000)*20)/100) + 34000;
         else
             tax_amount=(((taxable_income-1000000)*30)/100) + 94000;
+        }
     }
 
     //Method to display according to format provided
